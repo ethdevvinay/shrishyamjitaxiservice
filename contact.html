@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Contact Us - Shri Shyam Ji Taxi Service Rohtak | Book Your Taxi Now</title>
+    <meta name="title" content="Contact Us - Shri Shyam Ji Taxi Service Rohtak">
+    <meta name="description" content="Contact Shri Shyam Ji Taxi Service Rohtak. Call 9667850650 for instant taxi booking. WhatsApp, call, or visit our office in Rohtak. 24/7 available.">
+    <meta name="keywords" content="Contact Taxi Service Rohtak, Taxi Booking Rohtak, Rohtak Taxi Contact Number">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="logo.webp">
+    <link rel="apple-touch-icon" href="logo.webp">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Contact Page Specific Styles */
+        .contact-hero {
+            background: var(--gradient-primary-bright);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .contact-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        .contact-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-page-wrapper {
+            background: linear-gradient(135deg, var(--gray-light) 0%, var(--white) 100%);
+            padding: 80px 0;
+            min-height: 70vh;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: var(--transition);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-primary-bright);
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: var(--transition-slow);
+        }
+
+        .contact-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .contact-card-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary-bright);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 20px var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card-icon::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: var(--transition-slow);
+        }
+
+        .contact-card:hover .contact-card-icon::after {
+            width: 200px;
+            height: 200px;
+        }
+
+        .contact-card h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .contact-card p,
+        .contact-card a {
+            color: var(--text-medium);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .contact-card a:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .contact-card.whatsapp .contact-card-icon {
+            background: var(--gradient-success-bright);
+        }
+
+        .contact-card.call .contact-card-icon {
+            background: var(--gradient-primary-bright);
+        }
+
+        .contact-card.location .contact-card-icon {
+            background: var(--gradient-accent-gold);
+        }
+
+        .contact-card.hours .contact-card-icon {
+            background: var(--gradient-blue-gold);
+        }
+
+        .premium-form-container {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 25px;
+            box-shadow: 0 15px 50px var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .premium-form-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-accent-gold);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .form-header h2 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .form-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .form-group-premium {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .form-group-premium label {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .form-group-premium input,
+        .form-group-premium textarea,
+        .form-group-premium select {
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            border: 2px solid var(--gray-border);
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--gray-light);
+        }
+
+        .form-group-premium input:focus,
+        .form-group-premium textarea:focus,
+        .form-group-premium select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: var(--white);
+            box-shadow: 0 0 0 4px rgba(30, 64, 175, 0.1), 0 4px 15px var(--shadow);
+            transform: translateY(-2px);
+        }
+
+        .form-group-premium textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn-premium {
+            width: 100%;
+            padding: 1.3rem 2rem;
+            background: var(--gradient-primary-bright);
+            color: var(--white);
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 8px 25px var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: var(--transition);
+        }
+
+        .submit-btn-premium:hover::before {
+            left: 100%;
+        }
+
+        .submit-btn-premium:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px var(--shadow-lg);
+        }
+
+        .whatsapp-btn-premium {
+            width: 100%;
+            padding: 1.3rem 2rem;
+            background: var(--gradient-success-bright);
+            color: var(--white);
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 8px 25px var(--shadow-success);
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .whatsapp-btn-premium:hover {
+            background: var(--gradient-success);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px var(--shadow-success);
+        }
+
+        .map-container-premium {
+            margin-top: 4rem;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px var(--shadow-lg);
+            position: relative;
+        }
+
+        .map-container-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-accent-gold);
+            z-index: 1;
+        }
+
+        .map-container-premium iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            display: block;
+        }
+
+        .quick-contact-banner {
+            background: var(--gradient-blue-gold);
+            padding: 3rem 0;
+            text-align: center;
+            color: var(--white);
+            margin-top: 4rem;
+            border-radius: 25px;
+            box-shadow: 0 15px 50px var(--shadow-lg);
+        }
+
+        .quick-contact-banner h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .quick-contact-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .quick-btn {
+            padding: 1rem 2.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quick-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 968px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-info-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-hero {
+                padding: 100px 0 60px;
+            }
+
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+
+            .premium-form-container {
+                padding: 2rem;
+            }
+
+            .form-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+                        <img src="logo.webp" alt="Shri Shyam Ji Taxi Service Logo" class="logo-img">
+                        <span>Shri Shyam Ji Taxi Service</span>
+                    </a>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#updates" class="nav-link">Updates</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    <li><a href="tel:+919667850650" class="nav-cta">Book Now</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1>Get In Touch With Us</h1>
+                <p>We're here to help you with all your taxi service needs. Contact us anytime, we're available 24/7!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Page Content -->
+    <section class="contact-page-wrapper">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info Cards -->
+                <div class="contact-info-cards">
+                    <div class="contact-card whatsapp">
+                        <div class="contact-card-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp Us</h3>
+                        <a href="https://wa.me/919667850650?text=Hello%2C%20I%20need%20a%20taxi%20service%20in%20Rohtak" target="_blank">+91 9667850650</a>
+                        <p>Quick booking via WhatsApp. Get instant response!</p>
+                    </div>
+
+                    <div class="contact-card call">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <a href="tel:+919667850650">+91 9667850650</a>
+                        <p>24/7 customer support. Call us anytime!</p>
+                    </div>
+
+                    <div class="contact-card location">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Visit Us</h3>
+                        <p>Delhi Bye Pass, near Nexa Showroom<br>Vinay Nagar, Rohtak<br>Haryana 124001</p>
+                    </div>
+
+                    <div class="contact-card hours">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Operating Hours</h3>
+                        <p><strong>24 Hours / 7 Days a Week</strong></p>
+                        <p>We're always available for your convenience</p>
+                    </div>
+                </div>
+
+                <!-- Premium Contact Form -->
+                <div class="premium-form-container">
+                    <div class="form-header">
+                        <h2>Send Us a Message</h2>
+                        <p>Fill out the form below and we'll get back to you soon</p>
+                    </div>
+                    <form id="contactFormPremium">
+                        <div class="form-group-premium">
+                            <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group-premium">
+                            <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        </div>
+
+                        <div class="form-group-premium">
+                            <label for="email"><i class="fas fa-envelope"></i> Email (Optional)</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email">
+                        </div>
+
+                        <div class="form-group-premium">
+                            <label for="service"><i class="fas fa-taxi"></i> Service Type</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="Local Taxi">Local Taxi in Rohtak</option>
+                                <option value="Outstation Taxi">Outstation Taxi</option>
+                                <option value="Airport Transfer">Airport Pick/Drop</option>
+                                <option value="Corporate Travel">Corporate Travel</option>
+                                <option value="Sightseeing Tour">Sightseeing Tour</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group-premium">
+                            <label for="message"><i class="fas fa-comment"></i> Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your requirements..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn-premium">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+
+                        <a href="https://wa.me/919667850650?text=Hello%2C%20I%20need%20a%20taxi%20service" class="whatsapp-btn-premium" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Quick WhatsApp Booking
+                        </a>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="map-container-premium">
+                <iframe 
+                    src="https://www.google.com/maps?q=Delhi+Bye+Pass,+near+Nexa+Showroom,+Vinay+Nagar,+Rohtak,+Haryana+124001&output=embed&hl=en"
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Shri Shyam Ji Taxi Service Location"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                </iframe>
+                <div style="display: none; text-align: center; padding: 3rem; background: var(--gray-light); border-radius: 15px;">
+                    <i class="fas fa-map-marker-alt" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">View Our Location</h3>
+                    <p style="color: var(--text-medium); margin-bottom: 1.5rem;">Delhi Bye Pass, near Nexa Showroom, Vinay Nagar, Rohtak, Haryana 124001</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Delhi+Bye+Pass,+near+Nexa+Showroom,+Vinay+Nagar,+Rohtak,+Haryana+124001" 
+                       target="_blank" 
+                       style="background: var(--gradient-primary-bright); color: var(--white); padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px var(--shadow-md);">
+                        <i class="fas fa-external-link-alt"></i> Open in Google Maps
+                    </a>
+                </div>
+                <div style="text-align: center; margin-top: 1rem; padding: 1rem;">
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Delhi+Bye+Pass,+near+Nexa+Showroom,+Vinay+Nagar,+Rohtak,+Haryana+124001" 
+                       target="_blank" 
+                       style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-directions"></i> Get Directions
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Contact Banner -->
+            <div class="quick-contact-banner">
+                <h3>Need Immediate Assistance?</h3>
+                <p>Contact us right now for instant taxi booking</p>
+                <div class="quick-contact-buttons">
+                    <a href="tel:+919667850650" class="quick-btn">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                    <a href="https://wa.me/919667850650?text=Hello%2C%20I%20need%20a%20taxi%20service" class="quick-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="index.html#services" class="quick-btn">
+                        <i class="fas fa-taxi"></i> View Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.webp" alt="Shri Shyam Ji Taxi Service Logo" class="logo-img">
+                        <span>Shri Shyam Ji Taxi Service</span>
+                    </div>
+                    <p>Your trusted 24/7 taxi service in Rohtak. Safe, reliable, and affordable travel solutions for all your needs.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/919667850650" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="tel:+919667850650" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#updates">Updates</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#services">Local Taxi</a></li>
+                        <li><a href="index.html#services">Outstation Taxi</a></li>
+                        <li><a href="index.html#services">Airport Transfer</a></li>
+                        <li><a href="index.html#services">Corporate Travel</a></li>
+                        <li><a href="index.html#services">Sightseeing Tours</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> <a href="tel:+919667850650">+91 9667850650</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919667850650" target="_blank">WhatsApp Us</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Delhi Bye Pass, near Nexa Showroom<br>Vinay Nagar, Rohtak, Haryana 124001</li>
+                    </ul>
+                    <a href="https://wa.me/919667850650?text=Hello%2C%20I%20need%20a%20taxi%20service" class="footer-cta" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Book via WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Shri Shyam Ji Taxi Service – All Rights Reserved</p>
+                <p class="seo-text">Best Taxi Service in Rohtak | Taxi Service Rohtak | Rohtak Car Rental | Airport Taxi Rohtak</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/919667850650?text=Hello%2C%20I%20need%20a%20taxi%20service%20in%20Rohtak" class="float-btn whatsapp-btn" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="tel:+919667850650" class="float-btn call-btn" aria-label="Call">
+            <i class="fas fa-phone"></i>
+            <span>Call</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Contact Form Handler
+        const contactFormPremium = document.getElementById('contactFormPremium');
+        
+        if (contactFormPremium) {
+            contactFormPremium.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const formData = new FormData(contactFormPremium);
+                const name = formData.get('name');
+                const phone = formData.get('phone');
+                const email = formData.get('email');
+                const service = formData.get('service');
+                const message = formData.get('message');
+                
+                // Create WhatsApp message
+                let whatsappMessage = `Hello, I need a taxi service.\n\n`;
+                whatsappMessage += `Name: ${name}\n`;
+                whatsappMessage += `Phone: ${phone}\n`;
+                if (email) whatsappMessage += `Email: ${email}\n`;
+                whatsappMessage += `Service: ${service}\n`;
+                if (message) whatsappMessage += `Message: ${message}`;
+                
+                const whatsappUrl = `https://wa.me/919667850650?text=${encodeURIComponent(whatsappMessage)}`;
+                
+                // Open WhatsApp
+                window.open(whatsappUrl, '_blank');
+                
+                // Show success message
+                alert('Form submitted! Opening WhatsApp...');
+                
+                // Reset form
+                contactFormPremium.reset();
+            });
+        }
+
+        // Navbar scroll effect for contact page
+        const navbar = document.getElementById('navbar');
+        if (navbar) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
